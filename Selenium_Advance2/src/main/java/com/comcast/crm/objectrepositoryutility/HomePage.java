@@ -19,7 +19,8 @@ public class HomePage {
 	
 	@FindBy(xpath="//a[.='Organizations']")
 	private WebElement orgLink;
-	
+	@FindBy(linkText = "Products")
+	private WebElement productLink;
 	@FindBy(linkText = "Contacts")
 	private WebElement contactLink;
 	@FindBy(xpath="//img[@src='themes/softed/images/user.PNG']")
@@ -27,6 +28,14 @@ public class HomePage {
 	@FindBy(id="ondemand_sub")
 	private WebElement signoutlink;
 	
+	public WebElement getProductLink() {
+		return productLink;
+	}
+
+	public void setProductLink(WebElement productLink) {
+		this.productLink = productLink;
+	}
+
 	public WebElement getAdminimg() {
 		return adminimg;
 	}
